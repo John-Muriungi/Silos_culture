@@ -1,6 +1,5 @@
 # 🌿 Silos Culture Mitunguu - Eco Resort & Camping
 
-![Silos Culture Banner](https://via.placeholder.com/800x200/556B2F/FFFFFF?text=Silos+Culture+Mitunguu)
 
 Welcome to **Silos Culture Mitunguu**, an enchanting eco-resort nestled in the heart of Meru County, Kenya. Experience the perfect blend of nature, culture, and warm hospitality in a serene wilderness setting.
 
