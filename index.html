@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silos Culture Mitunguu | Eco Resort & Camping</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <a href="#" class="nav-logo">Silos Culture<small>Mitunguu Eco Resort</small></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#packages">Packages</a>
+      <a href="#activities">Activities</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#location">Location</a>
+    </div>
+    <button class="nav-book-btn" onclick="scrollToBooking()">Book Now</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Eco Culture Resort · Mitunguu · Meru County</div>
+      <h1>Nature.<br><span class="italic">Culture.</span><br><span class="outline">Memory.</span></h1>
+      <p class="hero-tagline">Where the wilderness of Meru meets warm Kenyan hospitality. An unforgettable escape for
+        families, adventurers, and those who seek something real.</p>
+      <div class="hero-actions">
+        <button class="btn-gold" onclick="scrollToBooking()">Reserve Your Stay</button>
+        <a href="#packages" class="btn-ghost">Explore Packages</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-bar"></div>
+      Discover
+    </div>
+  </section>
+
+  <!-- QUICK BOOKING BAR -->
+  <div class="quick-book">
+    <div class="quick-book-inner">
+      <div class="qb-field">
+        <label>Check In</label>
+        <input type="date" id="qb-checkin">
+      </div>
+      <div class="qb-field">
+        <label>Check Out</label>
+        <input type="date" id="qb-checkout">
+      </div>
+      <div class="qb-field">
+        <label>Guests</label>
+        <select id="qb-guests">
+          <option>1 Guest</option>
+          <option>2 Guests</option>
+          <option selected>3–4 Guests</option>
+          <option>5–8 Guests</option>
+          <option>9+ Guests / Group</option>
+        </select>
+      </div>
+      <div class="qb-field">
+        <label>Package</label>
+        <select id="qb-package">
+          <option>Day Visit</option>
+          <option>Family Camping</option>
+          <option>Full Experience</option>
+          <option>Corporate Retreat</option>
+        </select>
+      </div>
+      <button class="qb-search" onclick="quickSearch()">
+        <span>🔍</span> Check Availability
+      </button>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <p class="section-label">Our Story</p>
+      <h2 class="display-title">A Cool & Fine Place,<br>Always in Every Season</h2>
+      <div class="about-layout">
+        <div class="about-body">
+          <p>Silos Culture Mitunguu is more than a resort — it's a living, breathing cultural experience nestled in the
+            heart of Meru County. Surrounded by lush greenery and open skies, it has been welcoming families, couples,
+            and groups for years.</p>
+          <p>Every visit offers something special: the laughter of children in the park, the scent of mbuzi choma on the
+            grill, the rustle of leaves along the nature trails, and the warmth of genuine Kenyan hospitality from our
+            team.</p>
+          <p>Whether you're celebrating a milestone, planning a school trip, or simply need to breathe — Silos Culture
+            is ready for you.</p>
+          <div class="about-stats">
+            <div class="a-stat">
+              <div class="a-stat-num">10/10</div>
+              <div class="a-stat-txt">Guest Rating</div>
+            </div>
+            <div class="a-stat">
+              <div class="a-stat-num">4+</div>
+              <div class="a-stat-txt">Years Open</div>
+            </div>
+            <div class="a-stat">
+              <div class="a-stat-num">500+</div>
+              <div class="a-stat-txt">Happy Guests</div>
+            </div>
+            <div class="a-stat">
+              <div class="a-stat-num">6</div>
+              <div class="a-stat-txt">Activities</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-block">
+          <div class="about-img-text">
+            <div class="about-img-quote">"The best place to be with your family and friends. I celebrated my birthday
+              here."</div>
+            <div class="about-img-attr">— Solomon Manyara, Guest</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <p class="section-label">Packages & Pricing</p>
+      <h2 class="display-title">Choose Your Experience</h2>
+      <div class="packages-grid">
+
+        <div class="pkg-card">
+          <div class="pkg-header">
+            <span class="pkg-icon">☀️</span>
+            <div class="pkg-name">Day Visit</div>
+            <div class="pkg-tagline">Perfect for families and groups wanting a full day of fun without overnight stay.
+            </div>
+          </div>
+          <div class="pkg-price">
+            <div class="pkg-amount">KSh 800 <span>/ adult</span></div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.3rem;">Children under 5: Free</div>
+          </div>
+          <ul class="pkg-features">
+            <li>Full access to children's park</li>
+            <li>Nature trail access</li>
+            <li>Swimming pool (seasonal)</li>
+            <li>Picnic area use</li>
+            <li>CBC learning equipment</li>
+          </ul>
+          <div class="pkg-cta"><button class="pkg-btn" onclick="selectPackage('Day Visit', 800)">Select Package</button>
+          </div>
+        </div>
+
+        <div class="pkg-card featured">
+          <div class="pkg-header">
+            <span class="pkg-badge">Most Popular</span>
+            <span class="pkg-icon">🏕️</span>
+            <div class="pkg-name">Family Camping</div>
+            <div class="pkg-tagline">An overnight wilderness adventure with everything your family needs for a magical
+              stay.</div>
+          </div>
+          <div class="pkg-price">
+            <div class="pkg-amount">KSh 2,500 <span>/ night (family)</span></div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.3rem;">Up to 4 people · Extra guests KSh 600
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li>Camping tent or banda accommodation</li>
+            <li>Breakfast included</li>
+            <li>All Day Visit inclusions</li>
+            <li>Campfire evening session</li>
+            <li>Guided nature walk</li>
+            <li>Mbuzi choma dinner (optional add-on)</li>
+          </ul>
+          <div class="pkg-cta"><button class="pkg-btn" onclick="selectPackage('Family Camping', 2500)">Select
+              Package</button></div>
+        </div>
+
+        <div class="pkg-card">
+          <div class="pkg-header">
+            <span class="pkg-icon">⭐</span>
+            <div class="pkg-name">Full Experience</div>
+            <div class="pkg-tagline">The ultimate Silos package — luxury camping, all meals, and exclusive activities.
+            </div>
+          </div>
+          <div class="pkg-price">
+            <div class="pkg-amount">KSh 5,000 <span>/ night (family)</span></div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.3rem;">Up to 4 people · All-inclusive</div>
+          </div>
+          <ul class="pkg-features">
+            <li>Premium accommodation</li>
+            <li>All meals included (3 per day)</li>
+            <li>All activities included</li>
+            <li>Private campfire + bonfire</li>
+            <li>Guided cultural experience</li>
+            <li>Birthday / event decoration</li>
+            <li>Priority customer service</li>
+          </ul>
+          <div class="pkg-cta"><button class="pkg-btn" onclick="selectPackage('Full Experience', 5000)">Select
+              Package</button></div>
+        </div>
+
+        <div class="pkg-card">
+          <div class="pkg-header">
+            <span class="pkg-icon">🏢</span>
+            <div class="pkg-name">Corporate Retreat</div>
+            <div class="pkg-tagline">Team building, meetings, and bonding in a serene natural setting away from the
+              city.</div>
+          </div>
+          <div class="pkg-price">
+            <div class="pkg-amount">KSh 1,500 <span>/ person / day</span></div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.3rem;">Min 10 people · Custom packages
+              available</div>
+          </div>
+          <ul class="pkg-features">
+            <li>Conference / meeting space</li>
+            <li>Team building activities</li>
+            <li>All meals included</li>
+            <li>Accommodation available</li>
+            <li>AV equipment on request</li>
+            <li>Customised agenda support</li>
+          </ul>
+          <div class="pkg-cta"><button class="pkg-btn" onclick="selectPackage('Corporate Retreat', 1500)">Select
+              Package</button></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section class="activities-section" id="activities">
+    <div class="container">
+      <p class="section-label" style="color:var(--mint);">What Awaits You</p>
+      <h2 class="display-title light">Six Reasons to Come.<br><em style="font-style:italic;color:var(--mint);">A Hundred
+          to Return.</em></h2>
+      <div class="acts-grid">
+        <div class="act">
+          <div class="act-num">01</div>
+          <span class="act-icon">🧒</span>
+          <h3>Children's Park</h3>
+          <p>A fully functional, safe play environment packed with activities that keep children entertained from
+            morning to evening.</p>
+        </div>
+        <div class="act">
+          <div class="act-num">02</div>
+          <span class="act-icon">🌲</span>
+          <h3>Nature Trails</h3>
+          <p>Wind through scenic bush paths and discover the rich flora and fauna of the Meru landscape on guided or
+            self-guided walks.</p>
+        </div>
+        <div class="act">
+          <div class="act-num">03</div>
+          <span class="act-icon">🍖</span>
+          <h3>Mbuzi Choma & Cuisine</h3>
+          <p>Savour slow-roasted goat, fresh vegetables, and authentic Kenyan meals prepared with love. Food here is an
+            experience.</p>
+        </div>
+        <div class="act">
+          <div class="act-num">04</div>
+          <span class="act-icon">🏊</span>
+          <h3>Swimming Pool</h3>
+          <p>Cool off in our large pool — the perfect refresher after a morning of hiking or a day of family activities
+            in the sun.</p>
+        </div>
+        <div class="act">
+          <div class="act-num">05</div>
+          <span class="act-icon">📚</span>
+          <h3>CBC Learning Zone</h3>
+          <p>Purpose-built CBC-aligned learning equipment makes this ideal for school trips and family outings with
+            educational value.</p>
+        </div>
+        <div class="act">
+          <div class="act-num">06</div>
+          <span class="act-icon">🎉</span>
+          <h3>Events & Celebrations</h3>
+          <p>Birthdays, anniversaries, family reunions — our team sets the perfect scene for your most treasured
+            celebrations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <div class="gallery-strip">
+    <div class="gallery-item"><span class="gi-label">Nature Trails</span></div>
+    <div class="gallery-item"><span class="gi-label">Children's Park</span></div>
+    <div class="gallery-item"><span class="gi-label">Campfire Nights</span></div>
+    <div class="gallery-item"><span class="gi-label">Mbuzi Choma</span></div>
+    <div class="gallery-item"><span class="gi-label">Swimming Pool</span></div>
+  </div>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <p class="section-label">Guest Voices</p>
+      <h2 class="display-title">What Our Guests Say</h2>
+      <div class="reviews-grid">
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">"The best place to be with your family and friends. I celebrated my birthday here —
+            swimming pool coming soon, children's park is functional, meals are wooow. I recommend many people to
+            visit!"</p>
+          <div class="rev-author">
+            <div class="rev-avatar">SM</div>
+            <div>
+              <div class="rev-name">Solomon Manyara <span class="rev-guide-badge">Verified Guest</span></div>
+              <div class="rev-role">Birthday Celebration</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">"A good place for family outings with lots of children's activities. Highly recommend for
+            families!"</p>
+          <div class="rev-author">
+            <div class="rev-avatar">PM</div>
+            <div>
+              <div class="rev-name">Peter Muturi <span class="rev-guide-badge">Local Guide</span></div>
+              <div class="rev-role">25 reviews · 41 photos</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">"The place offers great services with a taste of luxury. Absolutely wonderful experience
+            from start to finish."</p>
+          <div class="rev-author">
+            <div class="rev-avatar">GM</div>
+            <div>
+              <div class="rev-name">Godia Mugeria <span class="rev-guide-badge">Local Guide</span></div>
+              <div class="rev-role">128 reviews</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">"Good place for family getaways, meetings, couples and children activities. Good customer
+            service and the food is yummy. Mbuzi choma is on point!"</p>
+          <div class="rev-author">
+            <div class="rev-avatar">LG</div>
+            <div>
+              <div class="rev-name">Lewis Gitonga <span class="rev-guide-badge">Local Guide</span></div>
+              <div class="rev-role">84 reviews · 27 photos</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">"It's an amazing place to chill. Very relaxing atmosphere — we will definitely be
+            returning soon."</p>
+          <div class="rev-author">
+            <div class="rev-avatar">KK</div>
+            <div>
+              <div class="rev-name">Korir Kipkirui <span class="rev-guide-badge">Local Guide</span></div>
+              <div class="rev-role">75 reviews · 310 photos</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">"A nice getaway in the wilderness. Must revisit. The tranquillity and atmosphere are
+            simply wonderful — highly recommended!"</p>
+          <div class="rev-author">
+            <div class="rev-avatar">GE</div>
+            <div>
+              <div class="rev-name">Gitonga E M <span class="rev-guide-badge">Local Guide</span></div>
+              <div class="rev-role">7 reviews · 58 photos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-section" id="booking">
+    <div class="container">
+      <p class="section-label">Make a Reservation</p>
+      <h2 class="display-title">Book Your Stay</h2>
+      <div class="booking-layout">
+        <div class="booking-info">
+          <h3>We'd Love to Host You</h3>
+          <p>Fill in the form to make a reservation. Our team will confirm your booking within 24 hours and send all the
+            details you need for your visit.</p>
+          <p>For large groups, corporate events, or special celebrations, feel free to call us directly and we'll create
+            a custom package just for you.</p>
+          <ul class="contact-list">
+            <li>
+              <div class="contact-icon">📍</div>
+              <div class="contact-detail"><strong>Location</strong><span>Mitunguu, Meru County, Kenya</span></div>
+            </li>
+            <li>
+              <div class="contact-icon">📞</div>
+              <div class="contact-detail"><strong>Phone</strong><span>+254 712 377 488</span></div>
+            </li>
+            <li>
+              <div class="contact-icon">📧</div>
+              <div class="contact-detail"><strong>Email</strong><span>bookings@silosculturemitunguu.co.ke</span></div>
+            </li>
+            <li>
+              <div class="contact-icon">🕐</div>
+              <div class="contact-detail"><strong>Open Hours</strong><span>Open 7 days a week · 7:00 AM – 10:00
+                  PM</span></div>
+            </li>
+            <li>
+              <div class="contact-icon">💳</div>
+              <div class="contact-detail"><strong>Payment</strong><span>M-Pesa · Cash · Bank Transfer</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="booking-form-card">
+          <div class="form-header">
+            <h3>Reservation Form</h3>
+            <p>Complete the form below — we'll confirm within 24 hours</p>
+          </div>
+          <div class="form-body">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" id="fname" placeholder="e.g. Amina" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" id="lname" placeholder="e.g. Osei" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" id="phone" placeholder="+254 7XX XXX XXX" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="you@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Check-In Date *</label>
+                <input type="date" id="checkin" required>
+              </div>
+              <div class="form-group">
+                <label>Check-Out Date</label>
+                <input type="date" id="checkout">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Number of Adults *</label>
+                <select id="adults">
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Adults</option>
+                  <option value="3">3 Adults</option>
+                  <option value="4">4 Adults</option>
+                  <option value="5">5 Adults</option>
+                  <option value="6+">6+ Adults</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Number of Children</label>
+                <select id="children">
+                  <option value="0" selected>No Children</option>
+                  <option value="1">1 Child</option>
+                  <option value="2">2 Children</option>
+                  <option value="3">3 Children</option>
+                  <option value="4+">4+ Children</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Select Package *</label>
+              <div class="pkg-select-grid" id="pkg-grid">
+                <label class="pkg-option selected" onclick="choosePackage(this, 'Day Visit', 800)">
+                  <input type="radio" name="package" value="day" checked>
+                  <strong>☀️ Day Visit</strong>
+                  <span>KSh 800 / adult</span>
+                </label>
+                <label class="pkg-option" onclick="choosePackage(this, 'Family Camping', 2500)">
+                  <input type="radio" name="package" value="camping">
+                  <strong>🏕️ Family Camping</strong>
+                  <span>KSh 2,500 / night</span>
+                </label>
+                <label class="pkg-option" onclick="choosePackage(this, 'Full Experience', 5000)">
+                  <input type="radio" name="package" value="full">
+                  <strong>⭐ Full Experience</strong>
+                  <span>KSh 5,000 / night</span>
+                </label>
+                <label class="pkg-option" onclick="choosePackage(this, 'Corporate Retreat', 1500)">
+                  <input type="radio" name="package" value="corporate">
+                  <strong>🏢 Corporate Retreat</strong>
+                  <span>KSh 1,500 / person</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="price-summary" id="price-summary">
+              <div class="price-row"><span>Package</span><span id="sum-pkg">Day Visit</span></div>
+              <div class="price-row"><span>Guests</span><span id="sum-guests">2 Adults</span></div>
+              <div class="price-row"><span>Nights / Days</span><span id="sum-nights">1</span></div>
+              <div class="price-row total"><span>Estimated Total</span><span id="sum-total">KSh 1,600</span></div>
+            </div>
+
+            <div class="form-group">
+              <label>Special Requests / Notes</label>
+              <textarea id="notes"
+                placeholder="e.g. Birthday celebration, dietary requirements, number of tents needed, corporate event details..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>How did you hear about us?</label>
+              <select id="source">
+                <option>Google Maps / Reviews</option>
+                <option>Friend / Family Referral</option>
+                <option>Social Media</option>
+                <option>Drove Past</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <button class="submit-btn" onclick="submitBooking()">
+              Confirm Reservation Request →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location-section" id="location">
+    <div class="container">
+      <p class="section-label" style="color:var(--mint);">Find Us</p>
+      <h2 class="display-title light">Getting to<br>Silos Culture</h2>
+      <div class="location-grid">
+        <div class="location-info">
+          <p>We are located in Mitunguu, Meru County — easily accessible from Meru Town and the surrounding areas. The
+            resort is well signposted once you enter Mitunguu.</p>
+          <ul class="directions-list">
+            <li>From Nairobi: Take the Meru Highway (A2) to Meru Town, then continue to Mitunguu (~190 km, approx. 3.5
+              hrs)</li>
+            <li>From Meru Town: Head towards Mitunguu Market — Silos Culture is clearly signposted along the main road
+            </li>
+            <li>By Matatu: Regular matatus from Meru Town to Mitunguu — ask to be dropped at Silos Culture Resort</li>
+            <li>GPS coordinates available on request — WhatsApp us for a pin drop</li>
+          </ul>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-icon">🗺️</div>
+          <p>Silos Culture Mitunguu<br><strong style="color:rgba(232,220,196,0.6)">Mitunguu, Meru County, Kenya</strong>
+          </p>
+          <a href="https://www.google.com/maps/search/Silos+Culture+Mitunguu" target="_blank">Open in Google Maps →</a>
+          <br>
+          <a href="https://wa.me/254712377488?text=Hi!%20I'd%20like%20your%20menu,%20photos,%20location%20(Google%20Maps),%20and%20contact%20details."
+            target="_blank" style="margin-top:0.5rem;">WhatsApp for Menu & Info →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo">Silos Culture</span>
+        <small>Mitunguu Eco Resort</small>
+        <p>A place where nature, culture, and family come together. Creating memories in the heart of Meru County,
+          Kenya.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#reviews">Guest Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#booking">Book a Stay</a></li>
+          <li><a href="#location">How to Find Us</a></li>
+          <li><a href="#">Group Bookings</a></li>
+          <li><a href="#">Corporate Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+254712377488">+254 712 377 488</a></li>
+          <li><a href="mailto:bookings@silosculturemitunguu.co.ke">Email Us</a></li>
+          <li><a href="https://wa.me/254712377488" target="_blank">WhatsApp</a></li>
+          <li><a href="#">Facebook Page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Silos Culture Mitunguu. All rights reserved. | Mitunguu, Meru County, Kenya</p>
+      <div class="footer-social">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="https://wa.me/254712377488" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="success-modal">
+    <div class="modal-box">
+      <span class="modal-icon">🎉</span>
+      <h3>Booking Received!</h3>
+      <p>Thank you! Your reservation request has been submitted successfully.</p>
+      <div class="booking-ref" id="booking-ref">SCM-0000</div>
+      <p style="font-size:0.85rem;">Our team will call or WhatsApp you within <strong>24 hours</strong> to confirm your
+        booking and share payment details.</p>
+      <p style="font-size:0.82rem;margin-top:0.5rem;color:var(--sage);">We look forward to welcoming you to Silos
+        Culture Mitunguu! 🌿</p>
+      <button class="modal-close" onclick="closeModal()">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
